@@ -1,0 +1,2 @@
+module CroquetHelper
+end
