@@ -15,13 +15,9 @@ class CroquetController < ApplicationController
     @title = "What You Need"
   end
 
-  def programme_2013
-    @title = "Programme 2013"
-  end
+ 
+  
 
-  def newsletters
-    @title = "Newsletters"
-  end
 
   def club_matters
     @title = "Club Matters"
@@ -31,9 +27,8 @@ class CroquetController < ApplicationController
     @title = "How to Get There"
   end
 
-  def book_a_lawn
-    @title = "Book a Lawn"
-  end
+ 
+  
 
   def links_to_croquet_sites
     @title = "Links to Croquet Sites"

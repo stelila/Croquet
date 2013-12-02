@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book_a_lawn.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book_a_lawn.description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @book_a_lawn.date %>
+</p>
+
+<%= link_to 'Edit', edit_book_a_lawn_path(@book_a_lawn) %> |
+<%= link_to 'Back', book_a_lawns_path %>

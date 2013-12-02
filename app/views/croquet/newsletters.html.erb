@@ -1,2 +1,13 @@
-<h1>Croquet#newsletters</h1>
-<p>Find me in app/views/croquet/newsletters.html.erb</p>
+<%= form_for @newsletters, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.file_field :file %>
+  </p>
+  
+  <p><%= f.submit %></p>
+<% end %>

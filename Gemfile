@@ -6,6 +6,17 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'devise'
+
+gem 'carrierwave'
+
+gem 'puma'
+
+gem "watu_table_builder", :require => "table_builder", :git => "git://github.com/watu/table_builder.git"
+
+gem 'sorted', '~> 0.4.3'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

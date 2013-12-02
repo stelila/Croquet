@@ -1,14 +1,24 @@
 Croquet::Application.routes.draw do
+  resources :book_a_lawns do
+    collection { get:events }
+  end
+
+  devise_for :users
+  
+  resources :newsletters
+
+  resources :programme2013s
+ 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root :to => 'croquet#home_page'
   match '/about_the_club', :to => 'croquet#about_the_club', via: :get
   match '/how_to_join', :to => 'croquet#how_to_join', via: :get
   match '/what_you_need', :to => 'croquet#what_you_need', via: :get
-  match '/programme_2013', :to => 'croquet#programme_2013', via: :get
-  match '/newsletters', :to => 'croquet#newsletters', via: :get
   match '/club_matters', :to => 'croquet#club_matters', via: :get
   match '/how_to_get_there', :to => 'croquet#how_to_get_there', via: :get
-  match '/book_a_lawn', :to => 'croquet#book_a_lawn', via: :get
-  match '/links_to_croquet_sites', :to => 'croquet#link_to_croquet_sites', via: :get
+ 
+  match '/links_to_croquet_sites', :to => 'croquet#links_to_croquet_sites', via: :get
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

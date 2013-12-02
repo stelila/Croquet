@@ -1,0 +1,61 @@
+<% if user_signed_in? %>
+    
+   
+  
+<h1>Listing book_a_lawns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @book_a_lawns.each do |book_a_lawn| %>
+      <tr>
+        <td><%= book_a_lawn.title %></td>
+        <td><%= book_a_lawn.description %></td>
+        <td><%= book_a_lawn.date %></td>
+        <td><%= link_to 'Show', book_a_lawn %></td>
+        <td><%= link_to 'Edit', edit_book_a_lawn_path(book_a_lawn) %></td>
+        <td><%= link_to 'Destroy', book_a_lawn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Book a lawn', new_book_a_lawn_path %>
+
+<div id="calendar">
+  <h2>
+    <%= link_to "<", :month => (@date.beginning_of_month-1).strftime("%Y-%m-%d") %>
+    <%=h @date.strftime("%B %Y") %>
+  <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-%d") %></h2>
+ <%= calendar_for(@book_a_lawns, :year => @date.year, :month => @date.month) do |calendar| %>
+  
+  <%= calendar.head('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday') %>
+  <%= calendar.day do |time, book_a_lawns| %>
+    <%= time.day %>
+    <ul>
+        <% for book_a_lawn in book_a_lawns %>
+          <li><%= link_to book_a_lawn.description, book_a_lawn %></li>
+        <% end %>
+      </ul>
+  
+  <% end %>
+<% end %>
+</div>
+
+<br>
+
+<% else %>
+<p> Please sign in to continue to this page or sign up if you are a new user. </p>
+  <% end %>
+
+

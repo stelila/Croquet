@@ -1,14 +1,48 @@
+<link rel="stylesheet" href="application.css" type="text/css">
+
 <nav>
-<ul>
+  
+<ul id="menu">
+
+ 
+  
 <li><%= link_to "Home Page", root_path %></li>
 <li><%= link_to "About the Club", about_the_club_path %></li>
 <li><%= link_to "How to Join", how_to_join_path %></li>
 <li><%= link_to "What you Need", what_you_need_path %></li>
-<li><%= link_to "Programme 2013", programme_2013_path %></li>  
+<li><%= link_to "Programme 2013", programme2013s_path %></li>  
 <li><%= link_to "Newsletters", newsletters_path %></li>
 <li><%= link_to "Club Matters", club_matters_path %></li>
 <li><%= link_to "How to get there", how_to_get_there_path %></li>
-<li><%= link_to "Book a Lawn", book_a_lawn_path %></li>
-<li><%= link_to "Links to Croquet Sites", links_to_croquet_sites_path %></li>  
+<li><%= link_to "Book a Lawn", book_a_lawns_path %></li>
+<li><%= link_to "Links to Croquet Sites", links_to_croquet_sites_path %>
+  
+  <ul>
+    <li><%= link_to "The Croquet Association" %>
+    
+        <ul class="sub1">
+          <li><%= link_to "CA Home",  "http://www.croquet.org.uk" %></li>
+          <li><%= link_to "CA Events", "http://www.croquet.org.uk/tournament/" %></li>
+        </ul>
+    </li>
+      
+    <li><%= link_to "South East Croquet", "http://www.southeastcroquet.org.uk/" %></li>
+    <li><%= link_to "The Croquet Academy", "http://www.thecroquetacademy.com/" %></li>
+    <li><%= link_to "Croquet Equipment" %>
+      <ul class="sub1"> 
+        <li><%= link_to "Mallets", "http://www.oxfordcroquet.com/equip/" %></li>
+        <li><%= link_to "Whites", "http://www.bowlsdirect.com/contact.htm" %></li>
+      </ul>
+    </li>  
+    
+    <li><%= link_to "Croquet Glossary", "http://cornwall-croquet.org.uk/croquet_glossary.htm" %></li>
+    <li><%= link_to "Croquet Rules" %>
+      <ul class="sub1">
+        <li><%= link_to "Association Rules", "http://www.croquet.org.uk/association/laws.html" %></li>
+         <li><%= link_to "Golf Rules", "http://www.croquet.org.uk/golf/laws/contents.htm" %></li>
+      </ul>
+    </li>
+ </ul>
+  </li>
 </ul>
 </nav>

@@ -1,0 +1,31 @@
+<h1>Listing programme2013s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @programme2013s.each do |programme2013| %>
+      <tr>
+        <td><%= programme2013.title %></td>
+        <td><%= programme2013.date %></td>
+        <td><%= programme2013.description %></td>
+        <td><%= link_to 'Show', programme2013 %></td>
+        <td><%= link_to 'Edit', edit_programme2013_path(programme2013) %></td>
+        <td><%= link_to 'Destroy', programme2013, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Programme2013', new_programme2013_path %>
